@@ -1,0 +1,23 @@
+<div class="d-flex flex-column justify-content-centre align-items-centre">
+  <h1 class="text-center mb-4">Start a new scoping session</h1>
+  <form class="container">
+    <div class="mb-4">
+      <h3>What are we scoping?</h3>
+      {{input
+        value=scopeTopic
+        placeholder="Scoping title..."
+        class="form-control"
+      }}
+    </div>
+    <div class="mb-4">
+      <h4>Brief description:</h4>
+      {{textarea value=scopeDescription placeholder="Brief description of task..." class='form-control'}}
+    </div>
+    <div class="d-flex flex-row justify-content-between">
+      <button {{action "startSession"}} class="btn btn-lg btn-info">Summon the underlings!</button>
+      <button {{action "clearForm"}} class="btn btn-lg btn-danger">Cancel</button>
+    </div>
+  </form>
+</div>
+
+{{outlet}}

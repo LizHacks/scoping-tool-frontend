@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('new');
+  this.route('scope');
+  this.route('home');
+  this.route('scoping', { path: '/scoping/:id' });
 });
 
 export default Router;
