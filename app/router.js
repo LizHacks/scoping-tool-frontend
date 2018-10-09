@@ -8,7 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('new');
-  this.route('scope');
+  this.route('scope', { path: '/scope/:id' });
   this.route('home');
   this.route('scoping', { path: '/scoping/:id' });
 });
