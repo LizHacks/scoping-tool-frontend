@@ -14,8 +14,9 @@ export default Ember.Controller.extend({
 	actions: {
 
 		startSession() {
-			get(this, 'ajax').request('/test-url', {
+			get(this, 'ajax').request('/create-new-session', {
 				method: 'POST',
+				contentType: 'application/json',
 				data: {
 					title: get(this, 'scopeTopic'),
 					description: get(this, 'scopeDescription')
@@ -23,15 +24,16 @@ export default Ember.Controller.extend({
 			})
 			.then((res) => {
 				get(this, 'state').setProperties({
-					'scopingUrl': res.created.url,
-					'id': res.created.id,
-					'created_at': res.created.created
+					'scopingUrl': res.url,
+					'id': res.id,
+					'created_at': res.created_at,
+					'scopeTopic': get(this, 'scopeTopic'),
+					'scopeDescription': get(this, 'scopeDescription')
 				});
-				get(this, 'router').transitionTo('scoping', res.created.id);
+				get(this, 'router').transitionTo('scoping', res.id);
 				return res;
 			})
 			.catch((error) => {
-				get(this, 'router').transitionTo('scoping', 'testing');
 				return error;
 			});
 		},
