@@ -1,6 +1,41 @@
 <div class="container d-flex flex-column justify-content-centre align-items-centre">
   <h1 class="text-center">Scoping: {{model.title}}</h1>
-  <p class="text-center">{{model.message}}</p>
+  <p class="text-center">{{model.description}}</p>
 </div>
+<form>
+ 	{{input type=text value=name placeholder='Your name...'}}
+	{{#radio-button
+	  value=1
+	  groupValue=score
+	  changed="scoreToggled"}}
+	  1
+	{{/radio-button}}
+
+	{{#radio-button
+	  value=2
+	  groupValue=score
+	  changed="scoreToggled"}}
+	  2
+	{{/radio-button}}
+		{{#radio-button
+	  value=3
+	  groupValue=score
+	  changed="scoreToggled"}}
+	  3
+	{{/radio-button}}
+		{{#radio-button
+	  value=5
+	  groupValue=score
+	  changed="scoreToggled"}}
+	  5
+	{{/radio-button}}
+		{{#radio-button
+	  value=8
+	  groupValue=score
+	  changed="scoreToggled"}}
+	  8
+	{{/radio-button}}
+	<button type="button" id="id_button" {{action 'submitScope'}}>Submit</button>
+</form>
 
 {{outlet}}

@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('scope', { path: '/scope/:id' });
   this.route('home');
   this.route('scoping', { path: '/scoping/:id' });
+  this.route('results', { path: '/results/:id' });
 });
 
 export default Router;

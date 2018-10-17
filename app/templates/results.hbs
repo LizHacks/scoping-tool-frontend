@@ -1,0 +1,11 @@
+{{outlet}}
+
+<h1><strong>{{model.response_count}}</strong> responses</h1>
+
+Average score: {{model.average_response}}
+
+{{#each model.responses as |response|}}
+	<div>
+		{{response.name}}: {{response.value}}
+	</div>
+{{/each}}
