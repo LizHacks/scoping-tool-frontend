@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import { inject } from '@ember/service';
-import { get } from '@ember/object';
+import { get, set } from '@ember/object';
 
 export default Ember.Controller.extend({
 	router: inject(),
@@ -25,6 +25,10 @@ export default Ember.Controller.extend({
 			.catch((error) => {
 				return error;
 			});
+		},
+
+		setScore(score) {
+			set(this,'score', score);
 		}
 	}
 

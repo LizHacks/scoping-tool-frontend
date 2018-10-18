@@ -5,7 +5,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'scoping-tool-frontend',
     environment,
-    rootURL: '/app',
+    rootURL: 'app/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -15,7 +15,11 @@ module.exports = function(environment) {
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
-      }
+      },
+      googlefonts: [
+        'Merriweather:400,700',
+        'Lato:300,400'
+      ]
     },
 
     APP: {

@@ -1,64 +1,143 @@
+@import "bulma";
+@import "defaults";
+html {
+	background: $background-default;
+	background: url('../assets/background-2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 body {
+	font-family: $body-font-stack;
+	font-size: $body-font-size;
+	line-height: 1.6em;
+	font-weight: $body-font-weight;
+	color: $body-colour-default;
 	min-height: 100vh;
-	font-family: 'Arial', 'Helvetica', sans-serif;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	text-align: center;
-	font-size: 16px;
-}
-
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
-input,
-textarea {
-	border: 1px solid black;
-	border-radius: 4px;
-	font-size: 16px;
-}
-
-input[type="text"] {
-	width: 100%;
-	height: 40px;
-	padding: 0 20px;
-}
-
-textarea {
-	width: 100%;
-	height: 200px;
+	align-items: center;
 	padding: 20px;
 }
 
-button {
-	padding: 10px 20px;
-	font-size: 16px;
-	border-radius: 4px;
-	margin-top: 20px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font-stack;
+	font-weight: $header-font-weight;
+	color: $header-colour-default;
+	margin-bottom: 0.2em
 }
 
-button:hover {
+h1 {
+	font-size: 2em;
+	line-height: 1.6em;
+}
+
+p {
+	margin-bottom: 1em
+}
+
+.left-float-container {
+	z-index: 99;
+	max-width: 500px;
+	border-radius: 6px;
+	padding: 40px;
+	border: 1px solid #ccc;
+	box-shadow: 5px 5px 40px rgba(0,0,0,0.5);
+	background: $background-default;
+}
+
+.center-float-container {
+	text-align: center;
+	z-index: 99;
+	max-width: 1400px;
+	margin: 0 auto;
+	border-radius: 6px;
+	padding: 40px;
+	border: 1px solid #ccc;
+	box-shadow: 5px 5px 40px rgba(0,0,0,0.5);
+	background: $background-default;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 35px;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: $body-font-stack;
 	cursor: pointer;
 }
-
-.btn-info {
-	background: #000042;
-	color: #f6f6f6;
-	border: 2px solid #000042;
-}
-
-.btn-info:hover {
-	background: lighten(#000042, 15%);
-}
-
-.btn-danger {
+.btn-yes {
+	color: $background-default;
 	background: #f624b5;
-	border: 2px solid #f624b5;
-	color: #f6f6f6;
+}
+.btn-yes:hover {
+	background: lighten(#f624b5, 10%);
+}
+.btn-yes:active {
+	background: darken(#f624b5, 10%);
 }
 
-.btn-danger:hover {
-	background: lighten(#f624b5, 15%);
+.btn-no {
+	color: #333;
+}
+
+input[type="textarea"],
+textarea {
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: 16px !important;
+}
+
+textarea {
+	height: 200px !important;
+}
+
+.flex-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+input[type="radio"] {
+	display: inline-block;
+}
+
+#scope-card-1.scope-card-1,
+#scope-card-2.scope-card-2,
+#scope-card-3.scope-card-3,
+#scope-card-5.scope-card-5,
+#scope-card-8.scope-card-8 {
+	border: 10px solid #333;
+}
+
+.scope-card {
+	font-size: 120px;
+	font-weight: bold;
+}
+
+.scope-cards-flex {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.scope-cards-flex .scope-card {
+	margin-right: 20px;
+	flex-grow: 1;
+	background: url('../assets/wangbones.png');
+	background-position: center top;
+	background-size: cover;
+	background-repeat: repeat;
+	height: 250px;
+	color: #F6F6F6;
+	border: 10px solid rgba(0,0,0,0);
+	border-radius: 6px;
+}
+
+.scope-cards-flex .scope-card:last-of-type {
+	margin-right: 0px;
 }

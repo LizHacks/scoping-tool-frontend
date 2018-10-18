@@ -7,6 +7,7 @@ export default Ember.Route.extend({
 	ajax: inject(),
 
 	model(params) {
+		console.log('works');
 		return get(this, 'ajax').request(`/get-session-details/${params.id}`, {
 			method: 'GET',
 		});

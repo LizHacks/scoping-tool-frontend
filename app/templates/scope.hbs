@@ -1,44 +1,20 @@
-
-	<h4 style="margin-bottom: 10px;">Scoping:</h4>
-  <h1 class="text-center" style="margin-top: 0px;">{{model.title}}</h1>
-  <p class="text-center">{{model.description}}</p>
-<form>
- 	{{input type=text value=name placeholder='Your name...'}}
- 	<br><br>
-	{{#radio-button
-	  value=1
-	  groupValue=score
-	  changed="scoreToggled"}}
-	  1
-	{{/radio-button}}
-
-	{{#radio-button
-	  value=2
-	  groupValue=score
-	  changed="scoreToggled"}}
-	  2
-	{{/radio-button}}
-		{{#radio-button
-	  value=3
-	  groupValue=score
-	  changed="scoreToggled"}}
-	  3
-	{{/radio-button}}
-		{{#radio-button
-	  value=5
-	  groupValue=score
-	  changed="scoreToggled"}}
-	  5
-	{{/radio-button}}
-		{{#radio-button
-	  value=8
-	  groupValue=score
-	  changed="scoreToggled"}}
-	  8
-	{{/radio-button}}
+<div class="center-float-container">
+	<h1 class="text-center" style="margin-top: 0px;">Scoping: {{model.title}}</h1>
+	<p class="text-center">{{model.description}}</p>
+	<form>
+		{{input type=text value=name class="input" placeholder='Your name...'}}
+		<br><br>
+		<div class="scope-cards-flex">
+			<button type="button" id="scope-card-1" class="scope-card scope-card-{{score}}" {{action 'setScore' 1}}>1</button>
+			<button type="button" id="scope-card-2" class="scope-card scope-card-{{score}}" {{action 'setScore' 2}}>2</button>
+			<button type="button" id="scope-card-3" class="scope-card scope-card-{{score}}" {{action 'setScore' 3}}>3</button>
+			<button type="button" id="scope-card-5" class="scope-card scope-card-{{score}}" {{action 'setScore' 5}}>5</button>
+			<button type="button" id="scope-card-8" class="scope-card scope-card-{{score}}" {{action 'setScore' 8}}>8</button>
+		</div>
 	<div>
-		<button type="button" class="btn-info" id="id_button" {{action 'submitScope'}}>Submit</button>
+		<button type="button" class="btn btn-yes" id="id_button" {{action 'submitScope'}}>Submit</button>
 	</div>
-</form>
+	</form>
+</div>
 
 {{outlet}}
