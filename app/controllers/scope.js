@@ -3,6 +3,7 @@ import { inject } from '@ember/service';
 import { get } from '@ember/object';
 
 export default Ember.Controller.extend({
+	router: inject(),
 	ajax: inject(),
 	state: inject(),
 
@@ -22,7 +23,6 @@ export default Ember.Controller.extend({
 				return res;
 			})
 			.catch((error) => {
-				console.log(error);
 				return error;
 			});
 		}

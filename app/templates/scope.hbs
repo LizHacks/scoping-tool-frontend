@@ -1,9 +1,10 @@
-<div class="container d-flex flex-column justify-content-centre align-items-centre">
-  <h1 class="text-center">Scoping: {{model.title}}</h1>
+
+	<h4 style="margin-bottom: 10px;">Scoping:</h4>
+  <h1 class="text-center" style="margin-top: 0px;">{{model.title}}</h1>
   <p class="text-center">{{model.description}}</p>
-</div>
 <form>
  	{{input type=text value=name placeholder='Your name...'}}
+ 	<br><br>
 	{{#radio-button
 	  value=1
 	  groupValue=score
@@ -35,7 +36,9 @@
 	  changed="scoreToggled"}}
 	  8
 	{{/radio-button}}
-	<button type="button" id="id_button" {{action 'submitScope'}}>Submit</button>
+	<div>
+		<button type="button" class="btn-info" id="id_button" {{action 'submitScope'}}>Submit</button>
+	</div>
 </form>
 
 {{outlet}}

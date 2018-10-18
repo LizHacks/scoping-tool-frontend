@@ -1,6 +1,9 @@
 <div class="container d-flex flex-column justify-content-centre align-items-centre">
   <h1 class="text-center">{{model.count}} Responses</h1>
-  <p class="text-center">Currently scoping: {{state.scopeTopic}}</p>
+  <p class="text-center">Currently scoping: {{state.scopeTopic}}</p><br><br>
+  <p>Please share this link so your underlings can scope this feature: <a href="{{model.submission_url}}">{{model.submission_url}}</a></p>
 </div>
+
+<button type="button" class="btn-danger" {{action 'endScope'}}>End scope</button>
 
 {{outlet}}
