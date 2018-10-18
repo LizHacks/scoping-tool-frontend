@@ -5,7 +5,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'scoping-tool-frontend',
     environment,
-    rootURL: '/',
+    rootURL: '/app',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
