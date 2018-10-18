@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
 				}
 			})
 			.then((res) => {
-				get(this, 'router').transitionTo('home');
+				get(this, 'router').transitionTo('thanks', get(this, 'model.session_id'));
 				return res;
 			})
 			.catch((error) => {

@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('home');
   this.route('scoping', { path: '/scoping/:id' });
   this.route('results', { path: '/results/:id' });
+  this.route('thanks', { path: '/thanks/:id' });
 });
 
 export default Router;
