@@ -2,8 +2,9 @@
   <h1 class="text-center">{{model.count}} Responses</h1>
   <p class="text-center">Currently scoping: {{state.scopeTopic}}</p><br><br>
   <p>Please share this link so your underlings can scope this feature: <a href="{{model.submission_url}}">{{model.submission_url}}</a></p>
-
-<button type="button" class="btn btn-yes" {{action 'endScope'}}>End scope</button>
+  {{#if state.id}}
+    <button type="button" class="btn btn-yes" {{action 'endScope'}}>End scope</button>
+  {{/if}}
 </div>
 
 
