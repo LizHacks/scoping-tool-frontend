@@ -9,7 +9,6 @@ export default Ember.Controller.extend({
 
   actions: {
     endScope() {
-      console.log('ending scope');
       get(this, 'ajax').request('/end-session', {
         contentType: 'application/json',
         method: 'POST',
@@ -18,7 +17,6 @@ export default Ember.Controller.extend({
         }
       })
       .then((res) => {
-        console.log(res);
         get(this, 'router').transitionTo('results', get(this, 'state.id'));
         return res;
       });
