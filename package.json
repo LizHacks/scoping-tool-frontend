@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "ember-bootstrap": "^2.1.2",
-    "ember-poll": "^1.4.0"
+    "ember-poll": "^1.4.0",
+    "merge": "^1.2.1"
   }
 }
