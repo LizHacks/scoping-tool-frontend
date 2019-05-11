@@ -21,7 +21,7 @@
     "bulma": "^0.5.3",
     "ember-ajax": "^3.1.1",
     "ember-bulma": "^0.4.2",
-    "ember-cli": "~2.15.1",
+    "ember-cli": "^3.9.0",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.3.0",
     "ember-cli-dependency-checker": "^2.0.0",
@@ -31,16 +31,16 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-qunit": "^4.0.0",
-    "ember-cli-sass": "^6.2.0",
+    "ember-cli-sass": "^10.0.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "~2.15.0",
+    "ember-data": "^3.9.3",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-radio-button": "^1.2.4",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~2.15.0",
+    "ember-source": "^3.9.1",
     "ember-welcome-page": "^3.0.0",
     "loader.js": "^4.2.3",
     "sass": "^1.14.3"
@@ -49,8 +49,9 @@
     "node": "^4.5 || 6.* || >= 7.*"
   },
   "dependencies": {
-    "ember-bootstrap": "^2.1.2",
+    "ember-bootstrap": "^2.6.2",
     "ember-poll": "^1.4.0",
-    "merge": "^1.2.1"
+    "merge": "^1.2.1",
+    "tar": "4.4.2"
   }
 }
