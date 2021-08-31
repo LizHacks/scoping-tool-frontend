@@ -52,6 +52,6 @@
     "ember-bootstrap": "^2.6.2",
     "ember-poll": "^1.4.0",
     "merge": "^1.2.1",
-    "tar": "4.4.2"
+    "tar": "4.4.18"
   }
 }
